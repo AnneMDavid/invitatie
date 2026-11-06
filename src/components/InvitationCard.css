@@ -1,0 +1,28 @@
+.invitation-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+}
+
+.invitation-card {
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 0;
+  background: #f3d4d9;
+  box-shadow: none;
+  position: relative;
+}
+
+.invitation-card::before,
+.invitation-card::after {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .invitation-card {
+    min-height: 100vh;
+  }
+}

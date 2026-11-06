@@ -1,0 +1,72 @@
+.invitation-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: transparent;
+}
+
+.invitation-sheet {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  height: 100vh;
+  background: #f3d4d9;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.invitation-sheet__viewport {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  padding-top: max(env(safe-area-inset-top), 0px);
+  padding-bottom: max(env(safe-area-inset-bottom), 0px);
+}
+
+.invitation-sheet__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.invitation-sheet__viewport::-webkit-scrollbar {
+  width: 4px;
+}
+
+.invitation-sheet__viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.invitation-sheet__viewport::-webkit-scrollbar-thumb {
+  background: rgba(74, 63, 61, 0.25);
+  border-radius: 999px;
+}
+
+.invitation-sheet__content {
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  .invitation-sheet-backdrop {
+    padding: 0;
+    align-items: stretch;
+    background: transparent;
+  }
+
+  .invitation-sheet {
+    width: 100%;
+    height: 100dvh;
+    min-height: 100vh;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
